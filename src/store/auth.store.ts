@@ -1,14 +1,9 @@
 import { create } from "zustand";
+import { User } from "@/types/auth.types";
 
-interface User {
-  id: string;
-  name: string;
-  email: string;
-
-}
 interface AuthState {
   isAuthenticated: boolean;
-  user: User |null;
+  user: User | null;
   setAuth: (user: User) => void;
   clearAuth: () => void;
 }
